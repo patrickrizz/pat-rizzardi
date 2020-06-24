@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Patrick D Rizzardi | Portfoio</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <section class="intro">
+        <nav class="z-depth-3">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo center">Patrick Rizzardi</a>                    
+                </div>
+            </div>
+        </nav>
+        <div class="center">
+            <div class="container">
+                <div class="header">
+                    <h1>Software Engineer</h1>
+                    <h5>Programming and Fitness</h5>
+                    <div class="content">
+                        <p> I believe that in life you have to pick a few things that matter, and give it everything
+                            you've
+                            got. Fitness keeps me motivated and on track, programming keeps me focused and productive.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m6">
+                        <img class="responsive-img hoverable" src="./images/codeing.jpg" alt="Software Engineering">
+                    </div>
+                    <div class="col m6">
+                        <img class="responsive-img hoverable" src="./images/fitness.jpg" alt="Fitness">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Github -->
+    <section class="container">
+        <div>
+            <h2>Search GitHub Users</h2>
+            <p>Enter a username to fetch a user profile and repos</p>
+            <input type="text" id="searchUser" placeholder="GitHub Username...">
+        </div>
+        <br>
+        <div id="profile"></div>
+    </section>
+    <!-- End of Github -->
+    <!-- Projects -->
+    <section>
+        <div class="cards">
+            <h2>What I do</h2>
+            <!-- Row -->
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/wcffit.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>West County Fitness<span>Laravel</span></h3>
+                    <a href="https://www.wcffit.com" target="_blank"></a>
+                </div>                
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/expensify.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Expense Tracker<span>ReactJS</span></h3>
+                    <a href="https://budget-4c0dd.web.app/" target="_blank"></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/wcffit.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Weather App<span>NodeJS</span></h3>
+                    <a href="https://www.wcffit.com" target="_blank"></a>
+                </div>
+            </div>
+            <!-- Row -->
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/tasks.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Task list<span>JavaScript</span></h3>
+                    <a href="/projects/taskList/" target="_blank"></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/guesser.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Number guesser<span>JavaScript</span></h3>
+                    <a href="/projects/numberGuesser/" target="_blank"></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/loancalc.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Loan calculator<span>JavaScript</span></h3>
+                    <a href="/projects/loanCalculator/" target="_blank"></a>
+                </div>
+            </div>
+            <!-- Row -->
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/wcffit.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>Client address book<span>PHP</span></h3>
+                    <a href="/projects/clientAddressBook/" target="_blank"></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="imgBx">
+                    <img src="./images/calorie.png" alt="">
+                </div>
+                <div class="content">
+                    <h3>CalorieTracker<span>JavaScript</span></h3>
+                    <a href="/projects/calorieTracker/" target="_blank"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of Projects -->
+
+    <footer>
+        Copyright &copy patrizzardi.com
+    </footer>
+
+    <script src="./js/materialize.min.js"></script>
+
+    <script src="../js/github.js"></script>
+    <script src="../js/ui.js"></script>
+    <script src="../js/app.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+</body>
+
+</html>
