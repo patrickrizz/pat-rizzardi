@@ -17,4 +17,5 @@ const routes = () => {
             .send('<h1 style="text-align: center font-size: 3.5em">404 Reqeust Not Found</h1>');
     });
 };
+
 exports.routes = routes;
