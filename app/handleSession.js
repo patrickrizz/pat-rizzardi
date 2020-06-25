@@ -8,8 +8,8 @@ function handleSession() {
             resave: false,
             saveUninitialized: false,
             cookie: {
-                secure: true,
-                httpOnly: true,
+                //secure: true,
+                //httpOnly: true,
                 //domain: 'patrizzardi.com',
                 maxAge: 60000,
                 //sameSite: 'strict'
