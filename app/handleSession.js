@@ -3,7 +3,7 @@ const { app } = require("../index");
 function handleSession() {
     if (app.get('env') === 'production') {
         app.use(session({
-            secret: [process.env.SESSION_SECRET, process.env.SESSION_SECRET_2],
+            secret: [process.env.SESSION_SECRET],
             //name: 'awesomeSession',
             //resave: false,
             //saveUninitialized: false,
