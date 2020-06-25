@@ -9,7 +9,6 @@ function handleSession() {
             saveUninitialized: false,
             cookie: {
                 secure: true,
-                httpOnly: true,
                 domain: 'patrizzardi.com',
                 path: 'foo/bar',
                 maxAge: 60000,
