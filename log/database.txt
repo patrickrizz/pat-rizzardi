@@ -44,3 +44,6 @@ Executing (78fba3ff-736f-4be5-94d5-d6818416a95d): COMMIT;
 Executing (1fb7fd04-caaa-44f3-9271-9e6fb4ac4155): BEGIN DEFERRED TRANSACTION;
 Executing (1fb7fd04-caaa-44f3-9271-9e6fb4ac4155): SELECT `id`, `googleid`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE `Users`.`googleid` = '105097979934155160948' AND `Users`.`email` = 'patrick.d.rizzardi@gmail.com' LIMIT 1;
 Executing (1fb7fd04-caaa-44f3-9271-9e6fb4ac4155): COMMIT;
+Executing (8eb101b6-c88a-4661-91bb-b6238517ce0d): BEGIN DEFERRED TRANSACTION;
+Executing (8eb101b6-c88a-4661-91bb-b6238517ce0d): SELECT `id`, `googleid`, `email`, `password`, `createdAt`, `updatedAt` FROM `Users` AS `Users` WHERE `Users`.`googleid` = '105097979934155160948' AND `Users`.`email` = 'patrick.d.rizzardi@gmail.com' LIMIT 1;
+Executing (8eb101b6-c88a-4661-91bb-b6238517ce0d): COMMIT;
