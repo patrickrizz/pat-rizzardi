@@ -4,4 +4,5 @@ db/database.sqlite
 .vs
 .env
 .env-production
+.snyk
 log
