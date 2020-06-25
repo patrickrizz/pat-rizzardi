@@ -1,5 +1,6 @@
 const { app } = require("../index")
 const express = require("express")
+const {ensureAuthenticated} = require('../config/auth')
 const handleRoutes = () => {
 
     //ejs
@@ -11,6 +12,7 @@ const handleRoutes = () => {
     app.use('/', require('./routes/index'))
     app.use('/projects', require('./routes/projects'))
     app.use('/auth', require('./routes/auth'))
+    app.use('/user', ensureAuthenticated, require('./routes/user'))
 
     // 404 route must be last
     app.use((req, res) => {

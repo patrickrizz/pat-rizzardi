@@ -10,27 +10,25 @@ passport.use(new GoogleStrategy({
     clientSecret: Settings.clientSecret,
     callbackURL: Settings.callbackURL
 
-}, async (accessToken, refreshToken, profile, done) => {
+}, (accessToken, refreshToken, profile, done) => {
     Users.findOrCreate({
         where: {
-            googleId: profile.id
+            googleid: profile.id,
+            email: profile.emails[0].value
         }
     })
 
-    return await done(null, profile);
-
+    return done(null, profile)
 }))
 
 //after strategy is done, you serialize the user
 passport.serializeUser((user, done) => {
 
-    done(null, user.id)
+    done(null, user)
 })
 
 //then it deserializes the user
-passport.deserializeUser((id, done) => {
+passport.deserializeUser((user, done) => {
 
-    User.findByPk(id, (err, user) => {
-        done(err, user)
-    })
+    done(null, user)
 })

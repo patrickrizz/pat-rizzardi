@@ -7,8 +7,8 @@ router.get('/google', passport.authenticate('google', { scope: ['profile', 'emai
 
 router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }),
     (req, res) => {
-        //successful authentication, redirect home
-        res.redirect('/user/homepage')
+
+        res.redirect('/')
     })
 
 // Logout
