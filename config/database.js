@@ -3,7 +3,7 @@ const fs = require('fs')
 module.exports = {
     development: {
         dialect: "sqlite",
-        storage: "./db/dev.sqlite",
+        storage: "./db/database.sqlite",
         logging: false
     },
     test: {
@@ -12,7 +12,7 @@ module.exports = {
     },
     production: {
         dialect: "sqlite",
-        storage: "./db/production.sqlite",
+        storage: "./db/database.sqlite",
         logging: function (msg) {
             let log = fs.createWriteStream('./log/database.txt', { flags: 'a' }, (err) => {
                 if (err) console.log(err)
