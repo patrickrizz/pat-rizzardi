@@ -1,5 +1,6 @@
 node_modules
-db
+db/dev.sqlite
+db/production.sqlite
 .vscode
 .vs
 .env
