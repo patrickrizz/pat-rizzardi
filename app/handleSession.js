@@ -11,7 +11,7 @@ function handleSession() {
                 //secure: true,
                 //httpOnly: true,
                 //domain: 'patrizzardi.com',
-                maxAge: 60000,
+                //maxAge: 60000,
                 //sameSite: 'strict'
             } //only used with https, can't with http. It secures the cookie, sameSite is for same site enforcment
         }));
