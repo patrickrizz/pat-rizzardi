@@ -6,7 +6,8 @@
   "scripts": {
     "test": "snyk test && echo no tests",
     "start": "snyk protect & nodemon index.js",
-    "secure": "npm audit & snyk test & snyk wizard & snyk protect"
+    "secure": "npm audit & snyk test & snyk wizard & snyk protect",
+    "db": "bash scripts/sequelize.sh"
   },
   "author": "Patrick D Rizzardi",
   "license": "ISC",

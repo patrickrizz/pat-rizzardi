@@ -1,30 +1,36 @@
 const passport = require('passport')
 const GoogleStrategy = require('passport-google-oauth').OAuth2Strategy
+const Settings = require('../app/settings')
+const { Users } = require('../db/models/')
 
 passport.use(new GoogleStrategy({
 
     //get the following from google apis credentials
-    clientID: process.env.GOOGLE_CLIENT_ID,
-    clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: "https://patrizzardi.com/auth/google/callback" //put urls in google console
+    clientID: Settings.clientID,
+    clientSecret: Settings.clientSecret,
+    callbackURL: "http://localhost:3000/auth/google/callback"
 
-}, (accessToken, refreshToken, profile, done) => {
-    //use prfile id to check if use is registered in db
-    User.findOrCreate({ googleid: profile.id }, (error, user) => {
-        //return done(error, profile)
-        return done(null, profile)
+}, async (accessToken, refreshToken, profile, done) => {
+    Users.findOrCreate({
+        where: {
+            googleId: profile.id
+        }
     })
+
+    return await done(null, profile);
+
 }))
 
 //after strategy is done, you serialize the user
 passport.serializeUser((user, done) => {
-    //done(error, user.id)
-    done(null, user)
+
+    done(null, user.id)
 })
 
 //then it deserializes the user
 passport.deserializeUser((id, done) => {
-    //User.findByPk(id, (error, user) => {
+
+    User.findByPk(id, (err, user) => {
         done(err, user)
-    //})
+    })
 })

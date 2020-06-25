@@ -3,3 +3,4 @@ db
 .vscode
 .vs
 .env
+.env-production
