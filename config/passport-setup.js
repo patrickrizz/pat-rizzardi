@@ -8,7 +8,7 @@ passport.use(new GoogleStrategy({
     //get the following from google apis credentials
     clientID: Settings.clientID,
     clientSecret: Settings.clientSecret,
-    callbackURL: "http://localhost:3000/auth/google/callback"
+    callbackURL: Settings.callbackURL
 
 }, async (accessToken, refreshToken, profile, done) => {
     Users.findOrCreate({
