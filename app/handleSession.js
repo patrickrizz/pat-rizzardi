@@ -9,7 +9,7 @@ function handleSession() {
             saveUninitialized: false,
             cookie: {
                 //secure: true,
-                httpOnly: true,
+                //httpOnly: true,
                 //domain: 'patrizzardi.com',
                 maxAge: 60000
             } //only used with https, can't with http. It secures the cookie, sameSite is for same site enforcment

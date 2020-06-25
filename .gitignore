@@ -5,3 +5,4 @@ db/production.sqlite
 .vs
 .env
 .env-production
+log
