@@ -1,0 +1,21 @@
+const express = require('express')
+const passport = require('passport')
+const router = express.Router()
+
+//google Oauth routes
+router.get('/google', passport.authenticate('google', { scope: ['profile', 'email'] }))
+
+router.get('/google/callback', passport.authenticate('google', { failureRedirect: '/' }),
+    (req, res) => {
+        //successful authentication, redirect home
+        res.redirect('/user/homepage')
+    })
+
+// Logout
+router.get('/logout', (req, res) => {
+    req.session.destroy((err) => console.log('Session Destroyed'))
+    req.logout()
+    res.redirect('/')
+})
+
+module.exports = router
