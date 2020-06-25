@@ -4,9 +4,9 @@ function handleSession() {
     if (app.get('env') === 'production') {
         app.use(session({
             secret: [process.env.SESSION_SECRET, process.env.SESSION_SECRET_2],
-            name: 'awesomeSession',
-            resave: false,
-            saveUninitialized: false,
+            // name: 'awesomeSession',
+            // resave: false,
+            // saveUninitialized: false,
             cookie: {
                 //secure: true,
                 //httpOnly: true,
