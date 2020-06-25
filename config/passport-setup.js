@@ -6,7 +6,7 @@ const { Users } = require('../db/models/')
 passport.use(new GoogleStrategy({
 
     //get the following from google apis credentials
-    clientID: Settings.clientID,
+    clientID: "1015680144613-8452u8s6uo1cr8jvekb9hrd0fi2duo2o.apps.googleusercontent.com",
     clientSecret: Settings.clientSecret,
     callbackURL: Settings.callbackURL
 
