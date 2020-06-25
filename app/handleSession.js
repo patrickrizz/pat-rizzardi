@@ -5,8 +5,8 @@ function handleSession() {
         app.use(session({
             secret: [process.env.SESSION_SECRET, process.env.SESSION_SECRET_2],
             //name: 'awesomeSession',
-            resave: false,
-            saveUninitialized: false,
+            //resave: false,
+            //saveUninitialized: false,
             cookie: {
                 //secure: true,
                 //httpOnly: true,
