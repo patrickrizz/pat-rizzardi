@@ -7,7 +7,22 @@ const playerRankings = async () => {
             "Accept": "application/json",
             "authorization": `Bearer ${token}`
         }
-    });
+    })
+
+    let json = await response.json()
+    return json
+}
+
+const clanStats = async () => {
+    let fetch = require('node-fetch')
+    let url = "https://api.clashofclans.com/v1/clans/%23CLJUQC8C"
+    let token = process.env.CLASH_OF_CLANS
+    let response = await fetch(url, {
+        headers: {
+            "Accept": "application/json",
+            "authorization": `Bearer ${token}` 
+        }
+    })
 
     let json = await response.json()
     return json
@@ -20,7 +35,7 @@ const clanMembers = async () => {
     let response = await fetch(url, {
         headers: {
             "Accept": "application/json",
-            "authorization": `Bearer ${token}`
+            "authorization": `Bearer ${token}` 
         }
     })
 
@@ -46,3 +61,4 @@ const currentWar = async () => {
 exports.playerRankings = playerRankings
 exports.clanMembers = clanMembers
 exports.currentWar = currentWar
+exports.clanStats = clanStats

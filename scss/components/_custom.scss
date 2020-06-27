@@ -19,3 +19,71 @@ footer {
     min-height: 5rem;
     padding: 5rem;
 }
+
+// Clash styles
+
+.clan {
+    height: 40rem;
+
+    &::before {
+        content: '';
+        background: url('../images/clash.jpg');
+        background-size: cover;
+        position: absolute;
+        top: $navbar-height;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        opacity: .3;
+        z-index: -1;
+    }
+
+    span {
+        margin-top: 2rem;
+    }
+
+}
+
+.members {
+    border-radius: 15px;
+    text-align: center;
+    margin: -6rem 1rem 5rem 1rem;
+    background: darken($table-color, 3);
+
+    h1 {
+        margin: 0;
+        padding: 2rem;
+    }
+
+    .row {
+        margin: 0 1rem 0 1rem;
+
+        @media #{$small-and-down} {
+            background: $table-color;
+            margin-bottom: 1.2rem;
+
+            &:first-child {
+                background: none;
+            }
+        }
+
+        .col {
+            margin-top: 1rem;
+            text-align: left;
+            background-color: $table-color;
+            font-size: $h5-fontsize * .8;
+
+            p {
+                margin: 0;
+                padding: 1.5rem;
+
+                &:first-child {
+                    font-size: $h5-fontsize;
+                }
+            }
+
+        }
+    }
+
+
+}

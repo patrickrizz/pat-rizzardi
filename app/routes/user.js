@@ -4,7 +4,7 @@ const router = express.Router()
 router.use(express.static('public'))
 
 router.get('/', (req, res) => {
-    res.render('user/homepage', {})
+    res.render('user/index', {})
 })
 
 module.exports = router

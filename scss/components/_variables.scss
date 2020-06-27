@@ -44,13 +44,15 @@ $error-color: color("red", "base") !default;
 $link-color: color("light-blue", "darken-1") !default;
 
 $navbar-color: color("", "") !default;
+$bg-color: #010615;
+$table-color: color('grey', 'darken-4');
 
 
 // 2. Badges
 // ==========================================================================
 
 $badge-bg-color: $secondary-color !default;
-$badge-height: 22px !default;
+$badge-height: 2rem !default;
 
 
 // 3. Buttons

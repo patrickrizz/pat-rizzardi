@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Clash of Clans | Clan</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../css/materialize.min.css">
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</span>
+        <![endif]-->
+    <nav class="container">
+        <div class="nav-wrapper">
+            <img src="../images/icons/clash-logo.png" width="100" alt="Clash of clans logo" />
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="sass.html">Summary</a></li>
+                <li><a href="badges.html">Player</a></li>
+                <li><a href="collapsible.html">Clan</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="clan">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 center">
+                    <h2><%- clan.name %></h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col l4 m4 s12 center">
+                    <img class="responsive-image" src="<%- clan.badgeUrls.medium %>" alt="Fearless Badge">
+                </div>
+                <div class="col l2 m3 s6">
+                    <span class="badge new"><img src="../images/icons/trophy.png" width="23" alt="Trophy">
+                        <p>Points: <%- clan.clanPoints %></p>
+                    </span>
+                </div>
+                <div class="col l2 m3 s6">
+                    <span class="badge new"><img src="../images/icons/clock.png" width="23" alt="Trophy">
+                        <p>
+                            <% if(clan.warFrequency) { %>
+                            Twice a week
+                            <% } %>
+                        </p>
+                    </span>
+                </div>
+                <div class="col l2 m3 s6">
+                    <span class="badge new"><img src="../images/icons/firework.png" width="23" alt="Trophy">
+                        <p> Wins: <%- clan.warWins %> </p>
+                    </span>
+                </div>
+                <div class="col l2 m3 s6">
+                    <span class="badge new"><img src="../images/icons/loop.png" width="23" alt="Trophy">
+                        <p> Wins Streak: <%- clan.warWinsStreak %> </p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    clanVersusPoints: 29892,
+    requiredTrophies: 2100,
+    warFrequency: 'moreThanOncePerWeek',
+    warWinStreak: 0,
+    warWins: 72,
+    isWarLogPublic: false,
+    warLeague: { id: 48000010, name: 'Crystal League III' },
+    members: 46,
+    <!-- Clan members list -->
+    <section class="members">
+        <div class="row">
+            <h3>Members</h3>
+        </div>
+        <% for (var i = 0; i < members.length ; i++) { %>
+        <div class="row">
+            <div class="col m5 s12">
+                <p><b><%- members[i].name -%></b></p>
+                <p>Role: <%- members[i].role -%></p>
+            </div>
+            <div class="col m4 s12">
+                <p>Rank: <%- members[i].clanRank -%></p>
+                <p><img src="../images/icons/trophy.png" width="23" alt="Trophies"><%- members[i].trophies -%></p>
+            </div>
+            <div class="col m3 s12">
+                <p> <img src="../images/icons/up.png" width="22" alt="Donated"><%- members[i].donations -%> </p>
+                <p> <img src="../images/icons/down.png" width="22" alt="Received"><%- members[i].donationsReceived -%>
+                </p>
+            </div>
+        </div>
+        <% } %>
+    </section>
+
+    <script src="" async defer></script>
+</body>
+
+</html>
