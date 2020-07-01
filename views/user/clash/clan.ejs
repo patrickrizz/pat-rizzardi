@@ -29,7 +29,7 @@
             </ul>
         </div>
     </nav>
-    <section class="clan">
+    <div class="clan">
         <div class="container">
             <div class="row">
                 <div class="col s12 center">
@@ -38,7 +38,7 @@
             </div>
             <div class="row">
                 <div class="col l4 m4 s12 center">
-                    <img class="responsive-image" src="<%= clan.badgeUrls.medium %>" alt="Fearless Badge">
+                    <img class="responsive-image" src="<%- clan.badgeUrls.medium %>" alt="Fearless Badge">
                 </div>
                 <div class="col l2 m3 s6">
                     <span class="badge new"><img src="../images/icons/trophy.png" width="23" alt="Trophy">
@@ -66,7 +66,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     clanVersusPoints: 29892,
     requiredTrophies: 2100,
@@ -77,7 +77,7 @@
     warLeague: { id: 48000010, name: 'Crystal League III' },
     members: 46,
     <!-- Clan members list -->
-    <section class="members">
+    <div class="members">
         <div class="row">
             <h3>Members</h3>
         </div>
@@ -98,7 +98,7 @@
             </div>
         </div>
         <% } %>
-    </section>
+    </div>
 
     <script src="" async defer></script>
 </body>
