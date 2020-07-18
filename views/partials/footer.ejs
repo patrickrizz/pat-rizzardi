@@ -1,0 +1,35 @@
+<footer class="padding-2 center">
+    Designed & Built by Patrick Rizzardi
+</footer>
+
+<script src="./js/materialize.min.js"></script>
+
+<script src="../js/github.js"></script>
+<script src="../js/ui.js"></script>
+<!-- <script src="../js/app.js"></script> -->
+<script>
+    var prevScrollpos = window.pageYOffset;
+    window.onscroll = function () {
+        var currentScrollPos = window.pageYOffset;
+        if (prevScrollpos > currentScrollPos) {
+            document.getElementById("navbar").style.top = "0";
+            document.getElementById("navbar").style.background = "#132f59";
+        } else {
+            document.getElementById("navbar").style.top = "-86px";
+        }
+
+        if (prevScrollpos > 400) {
+            document.querySelector('.return-button').style.opacity = "1";                
+        } else {
+            document.querySelector('.return-button').style.opacity = "0";
+            document.getElementById("navbar").style.background = "transparent";
+        }
+        prevScrollpos = currentScrollPos;
+    }
+</script>
+<script>
+    M.AutoInit();
+</script>
+</body>
+
+</html>

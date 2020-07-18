@@ -257,14 +257,13 @@ footer {
 // Clash styles
 
 .clan {
-    height: 40rem;
 
     &::before {
         content: '';
         background: url('../images/clash.jpg');
         background-size: cover;
         position: absolute;
-        top: $navbar-height;
+        top: 0;
         right: 0;
         bottom: 0;
         left: 0;
@@ -281,7 +280,7 @@ footer {
 .members {
     border-radius: 15px;
     text-align: center;
-    margin: -6rem 1rem 5rem 1rem;
+    margin: -5rem 1rem 5rem 1rem;
     background: darken($table-color, 3);
 
     h1 {

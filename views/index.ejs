@@ -1,67 +1,28 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Patrick D Rizzardi | Portfoio</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../css/materialize.min.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <!--[if lt IE 7]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-    <div class="intro">
-        <nav id="navbar" class="padding-left-2 padding-right-2">
-            <a class="return-button" href="#"><i
-                    class="large material-icons waves-effect waves-light">arrow_upward</i></a>
-            <div class="nav-wrapper">
-                <a href="/" class="brand-logo"><img src="images/icons/logo.png" alt="R logo"></a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
-                    <li><a href="/#projects"><span class="link-color">01.</span> Projects</a></li>
-                    <li><a href="/#about"><span class="link-color">02.</span> About</a></li>
-                    <!-- <li><a href="/#experience"><span class="link-color">03.</span> Experience</a></li> -->
-                    <li><a href="/#contact"><span class="link-color">03.</span> Contact</a></li>
-                    <li><a href="/auth/google">Login</a></li>
-                    <li><a class="waves-effect waves-light btn-small my-button" href="resume.pdf"
-                            target="_blank">Resume</a></li>
-                </ul>
-            </div>
-        </nav>
+    <header class="header overlay" style="background-image: url('images/header.jpg')">
         <div class="center">
-            <div class="header overlay" style="background-image: url('images/header.jpg')">
-                <div class="container left-align seperation-padding">
-                    <div class="row">
-                        <div class="col l12">
-                            <h1>Patrick Rizzardi</h1>
-                            <h2>I create and develop web applications</h2>
-                        </div>
+            <div class="container left-align seperation-padding">
+                <div class="row">
+                    <div class="col l12">
+                        <h1>Patrick Rizzardi</h1>
+                        <h2>I create and develop web applications</h2>
                     </div>
-                    <div class="row">
-                        <p class="fs-24 col l6">I am a software engineer in Northwestern, Pa
-                            specializing in building remarkable websites, and applications.</p>
-                    </div>
-                    <div class="row padding-top-2">
-                        <div class="col s12">
-                            <a href="mailto:patrick.d.rizzardi@gmail.com"
-                                class="waves-effect waves-light btn-large my-button">Get In Touch</a>
-                        </div>
+                </div>
+                <div class="row">
+                    <p class="fs-24 col l6">I am a software engineer in Northwestern, Pa
+                        specializing in building remarkable websites, and applications.</p>
+                </div>
+                <div class="row padding-top-2">
+                    <div class="col s12">
+                        <a href="mailto:patrick.d.rizzardi@gmail.com"
+                            class="waves-effect waves-light btn-large my-button">Get In Touch</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </header>
     <!-- Github -->
     <!-- <div class="container">
         <div>
@@ -74,7 +35,7 @@
     </div> -->
     <!-- End of Github -->
     <!-- Projects -->
-    <div id="projects" class="seperation-padding">
+    <section id="projects" class="seperation-padding">
         <div class="container">
             <h3 class="padding-left-2"><span class="link-color">01.</span> Featured Projects</h3>
             <% for(let i=0; i < projects.length; i++) { %>
@@ -101,7 +62,7 @@
             <% } %>
 
         </div>
-    </div>
+    </section>
     <!-- <div class="cards">
             <h2>What I do</h2>
 
@@ -182,7 +143,7 @@
         </div>
     </div> -->
     <!-- End of Projects -->
-    <div id="about" class="container seperation-padding">
+    <section id="about" class="container seperation-padding">
         <div class="row">
             <div class="col l6">
                 <h3><span class="link-color">02.</span> About Me</h3>
@@ -223,8 +184,8 @@
                 <img class="responsive-img padding-top-5" src="images/avatar.jpg" alt="Avatar">
             </div>
         </div>
-    </div>
-    <div id="experience" class="seperation-padding hide">
+    </section>
+    <section id="experience" class="seperation-padding hide">
         <div class="row">
             <div class="col l6 offset-l3">
                 <h3><span class="link-color">03.</span> Experience</h3>
@@ -249,8 +210,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container seperation-padding">
+    </section>
+    <section class="container seperation-padding">
         <div class="row">
             <div class="col l6">
                 <p id="contact" class="link-color">03. What's Next?</p>
@@ -265,38 +226,5 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <footer class="padding-2 center">
-        Designed & Built by Patrick Rizzardi
-    </footer>
-
-    <script src="./js/materialize.min.js"></script>
-
-    <script src="../js/github.js"></script>
-    <script src="../js/ui.js"></script>
-    <!-- <script src="../js/app.js"></script> -->
-    <script>
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-60px";
-            }
-
-            if (prevScrollpos > 400) {
-                document.querySelector('.return-button').style.opacity = "1";
-            } else {
-                document.querySelector('.return-button').style.opacity = "0";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-    </script>
-    <script>
-        M.AutoInit();
-    </script>
-</body>
-
-</html>
+    </section>
+    <%- include('partials/footer') %>

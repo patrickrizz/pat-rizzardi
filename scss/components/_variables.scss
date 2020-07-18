@@ -47,7 +47,7 @@ $button-color: #64FFDA !default;
 $bg-color: #0A192F;
 $bg-color-2: $secondary-color;
 
-$navbar-color: $bg-color !default;
+$navbar-color: transparent !default;
 $table-color: color('grey', 'darken-4');
 
 
@@ -250,7 +250,7 @@ $element-bottom-margin: ($gutter-width*2)/3 !default;
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 64px !default;
+$navbar-height: 85px !default;
 $navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;

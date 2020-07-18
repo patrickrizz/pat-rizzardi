@@ -1,7 +1,8 @@
-const express = require('express');
-const { projects } = require("../../public/projects");
+const express = require('express')
+const { projects } = require("../../public/projects")
 const { jobs } = require("../../public/jobs")
-const router = express.Router();
+const { indexNav } = require("../../public/nav")
+const router = express.Router()
 
 router.use(express.static('public'))
 
@@ -9,7 +10,9 @@ router.use(express.static('public'))
 router.get('/', (req, res) => {
     res.render('index', {
         projects: projects,
-        jobs: jobs
+        jobs: jobs,
+        nav: indexNav,
+        logo: "images/icons/logo.png"
     })
 })
 
