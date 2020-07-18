@@ -2,19 +2,17 @@
 
 *, *:before, *:after {
  box-sizing: border-box;
+ scroll-behavior: smooth;
 }
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  color: #fff;
+  color: $primary-color;
   background: $bg-color;
   overflow-x: hidden;
-}
-
-main {
-  // flex: 1 0 auto;
+  font-size: 18px;
 }
 
 button,
@@ -256,7 +254,7 @@ video.responsive-video {
 .parallax-container {
   position: relative;
   overflow: hidden;
-  height: 500px;
+  height: auto;
 
   .parallax {
     position: absolute;

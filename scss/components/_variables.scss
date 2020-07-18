@@ -34,17 +34,20 @@
 // 1. Colors
 // ==========================================================================
 
-$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color: #fff !default;
 $primary-color-light: lighten($primary-color, 15%) !default;
 $primary-color-dark: darken($primary-color, 15%) !default;
 
-$secondary-color: color("teal", "lighten-1") !default;
+$secondary-color: color("blue-grey", "darken-4") !default;
 $success-color: color("green", "base") !default;
 $error-color: color("red", "base") !default;
-$link-color: color("light-blue", "darken-1") !default;
+$link-color: $secondary-color !default;
+$button-color: #64FFDA !default;
 
-$navbar-color: color("", "") !default;
-$bg-color: #010615;
+$bg-color: #0A192F;
+$bg-color-2: $secondary-color;
+
+$navbar-color: $bg-color !default;
 $table-color: color('grey', 'darken-4');
 
 
@@ -60,7 +63,7 @@ $badge-height: 2rem !default;
 
 // Shared styles
 $button-border: none !default;
-$button-background-focus: lighten($secondary-color, 4%) !default;
+$button-background-focus: lighten($button-color, 4%) !default;
 $button-font-size: 14px !default;
 $button-icon-font-size: 1.3rem !default;
 $button-height: 36px !default;
@@ -122,8 +125,8 @@ $carousel-item-width: $carousel-item-height !default;
 
 $collapsible-height: 3rem !default;
 $collapsible-line-height: $collapsible-height !default;
-$collapsible-header-color: #fff !default;
-$collapsible-border-color: #ddd !default;
+$collapsible-header-color: $bg-color !default;
+$collapsible-border-color: $secondary-color !default;
 
 
 // 7. Chips
@@ -159,7 +162,7 @@ $timepicker-clock-plate-bg: #eee !default;
 
 $dropdown-bg-color: #fff !default;
 $dropdown-hover-bg-color: #eee !default;
-$dropdown-color: $secondary-color !default;
+$dropdown-color: #000 !default;
 $dropdown-item-height: 50px !default;
 
 
@@ -308,7 +311,7 @@ $toast-action-color: #eeff41;
 // 20. Typography
 // ==========================================================================
 
-$font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
+$font-stack: 'Quantico', sans-serif !default;
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
 $h1-fontsize: 4.2rem !default;

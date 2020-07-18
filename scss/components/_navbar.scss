@@ -11,7 +11,12 @@ nav {
       position: relative;
       line-height: normal;
     }
+
   }
+
+  position: fixed;
+  z-index: 1;
+  transition: .3s;
 
   color: $navbar-font-color;
   @extend .z-depth-1;
@@ -20,10 +25,13 @@ nav {
   height: $navbar-height-mobile;
   line-height: $navbar-line-height-mobile;
 
-  a { color: $navbar-font-color; }
+  a {
+    color: $navbar-font-color;
+  }
 
   i,
-  [class^="mdi-"], [class*="mdi-"],
+  [class^="mdi-"],
+  [class*="mdi-"],
   i.material-icons {
     display: block;
     font-size: 24px;
@@ -37,7 +45,9 @@ nav {
   }
 
   @media #{$large-and-up} {
-    a.sidenav-trigger { display: none; }
+    a.sidenav-trigger {
+      display: none;
+    }
   }
 
 
@@ -64,6 +74,11 @@ nav {
     font-size: $navbar-brand-font-size;
     padding: 0;
 
+    img {
+      padding: .5rem;
+      width: 55px;
+    }
+
     &.center {
       left: 50%;
       transform: translateX(-50%);
@@ -73,12 +88,16 @@ nav {
       left: 50%;
       transform: translateX(-50%);
 
-      &.left, &.right {
+      &.left,
+      &.right {
         padding: 0;
         transform: none;
       }
 
-      &.left { left: 0.5rem; }
+      &.left {
+        left: 0.5rem;
+      }
+
       &.right {
         right: 0.5rem;
         left: auto;
@@ -91,7 +110,8 @@ nav {
     }
 
     i,
-    [class^="mdi-"], [class*="mdi-"],
+    [class^="mdi-"],
+    [class*="mdi-"],
     i.material-icons {
       float: left;
       margin-right: 15px;
@@ -117,9 +137,10 @@ nav {
       padding: 0;
 
       &.active {
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(0, 0, 0, .1);
       }
     }
+
     a {
       transition: background-color .3s;
       font-size: $navbar-font-size;
@@ -128,19 +149,22 @@ nav {
       padding: 0 15px;
       cursor: pointer;
 
-      &.btn, &.btn-large, &.btn-flat, &.btn-floating {
+      &.btn,
+      &.btn-large,
+      &.btn-flat,
+      &.btn-floating {
         margin-top: -2px;
         margin-left: 15px;
         margin-right: 15px;
 
-        & > .material-icons {
+        &>.material-icons {
           height: inherit;
           line-height: inherit;
         }
       }
 
       &:hover {
-        background-color: rgba(0,0,0,.1);
+        background-color: rgba(0, 0, 0, .1);
       }
     }
 
@@ -164,8 +188,12 @@ nav {
       border: none;
       padding-left: 2rem;
 
-      &:focus, &[type=text]:valid, &[type=password]:valid,
-      &[type=email]:valid, &[type=url]:valid, &[type=date]:valid {
+      &:focus,
+      &[type=text]:valid,
+      &[type=password]:valid,
+      &[type=email]:valid,
+      &[type=url]:valid,
+      &[type=date]:valid {
         border: none;
         box-shadow: none;
       }
@@ -176,10 +204,13 @@ nav {
       left: 0;
 
       i {
-        color: rgba(255,255,255,.7);
+        color: rgba(255, 255, 255, .7);
         transition: color .3s;
       }
-      &.active i { color: $navbar-font-color; }
+
+      &.active i {
+        color: $navbar-font-color;
+      }
     }
   }
 }

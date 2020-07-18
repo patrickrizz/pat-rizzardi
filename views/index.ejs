@@ -13,6 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -20,39 +23,47 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <div class="intro">
-        <nav class="z-depth-3">
-            <div class="container">
-                <div class="nav-wrapper">
-                    <a href="#" class="brand-logo center">Patrick Rizzardi</a>
-                </div>
+        <nav id="navbar" class="padding-left-2 padding-right-2">
+            <a class="return-button" href="#"><i
+                    class="large material-icons waves-effect waves-light">arrow_upward</i></a>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo"><img src="images/icons/logo.png" alt="R logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/#projects"><span class="link-color">01.</span> Projects</a></li>
+                    <li><a href="/#about"><span class="link-color">02.</span> About</a></li>
+                    <!-- <li><a href="/#experience"><span class="link-color">03.</span> Experience</a></li> -->
+                    <li><a href="/#contact"><span class="link-color">03.</span> Contact</a></li>
+                    <li><a href="/auth/google">Login</a></li>
+                    <li><a class="waves-effect waves-light btn-small my-button" href="resume.pdf"
+                            target="_blank">Resume</a></li>
+                </ul>
             </div>
         </nav>
         <div class="center">
-            <div class="container">
-                <div class="header">
-                    <h1>Software Engineer</h1>
-                    <h5>Programming and Fitness</h5>
-                    <div class="content">
-                        <p> I believe that in life you have to pick a few things that matter, and give it everything
-                            you've
-                            got. Fitness keeps me motivated and on track, programming keeps me focused and
-                            productive.
-                        </p>
+            <div class="header overlay" style="background-image: url('images/header.jpg')">
+                <div class="container left-align seperation-padding">
+                    <div class="row">
+                        <div class="col l12">
+                            <h1>Patrick Rizzardi</h1>
+                            <h2>I create and develop web applications</h2>
+                        </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col m6">
-                        <img class="responsive-img hoverable" src="./images/codeing.jpg" alt="Software Engineering">
+                    <div class="row">
+                        <p class="fs-24 col l6">I am a software engineer in Northwestern, Pa
+                            specializing in building remarkable websites, and applications.</p>
                     </div>
-                    <div class="col m6">
-                        <img class="responsive-img hoverable" src="./images/fitness.jpg" alt="Fitness">
+                    <div class="row padding-top-2">
+                        <div class="col s12">
+                            <a href="mailto:patrick.d.rizzardi@gmail.com"
+                                class="waves-effect waves-light btn-large my-button">Get In Touch</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Github -->
-    <div class="container">
+    <!-- <div class="container">
         <div>
             <h2>Search GitHub Users</h2>
             <p>Enter a username to fetch a user profile and repos</p>
@@ -60,13 +71,40 @@
         </div>
         <br>
         <div id="profile"></div>
-    </div>
+    </div> -->
     <!-- End of Github -->
     <!-- Projects -->
-    <div>
-        <div class="cards">
+    <div id="projects" class="seperation-padding">
+        <div class="container">
+            <h3 class="padding-left-2"><span class="link-color">01.</span> Featured Projects</h3>
+            <% for(let i=0; i < projects.length; i++) { %>
+            <div class="row padding-2" id="<%= projects[i].id %>">
+                <div class="col l6 <% if (i % 2 == 1 ) { %> push-l6 <% } %> ">
+                    <img class="responsive-img" src="<%= projects[i].image_url %>" alt="">
+                </div>
+                <div
+                    class="col l6 middle <% if (i % 2 == 1 ) { %> pull-l6 <% } %> <% if (i % 2 == 0 ) { %> right-align <% } %>">
+                    <h3><%= projects[i].name %></h3>
+                    <p><%= projects[i].description %></p>
+                    <p><%= projects[i].tech %></p>
+                    <!-- <a class="waves-effect waves-light social-icon btn-large my-button" href="<%= projects[i].github %>"
+                        target="_blank"><i class="material-icons middle">link</i>Learn More</a> -->
+                    <% if (projects[i].project_link === "") { } else {%>
+                    <a class="waves-effect waves-light social-icon btn-large my-button"
+                        href="<%= projects[i].project_link %>" target="_blank"><i
+                            class="material-icons">open_in_new</i></a>
+                    <% } %>
+                    <a class="waves-effect waves-light social-icon btn-large my-button" href="<%= projects[i].github %>"
+                        target="_blank"> <i class="fa fa-github"></i></a>
+                </div>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+    <!-- <div class="cards">
             <h2>What I do</h2>
-            <!-- Row -->
+
             <div class="card">
                 <div class="imgBx">
                     <img src="./images/wcffit.png" alt="">
@@ -91,10 +129,10 @@
                 </div>
                 <div class="content">
                     <h3>Weather App<span>NodeJS</span></h3>
-                    <a href="https://www.wcffit.com" target="_blank"></a>
+                    <a href="/coming-soon" target="_blank"></a>
                 </div>
             </div>
-            <!-- Row -->
+
             <div class="card">
                 <div class="imgBx">
                     <img src="./images/tasks.png" alt="">
@@ -122,7 +160,7 @@
                     <a href="/projects/loanCalculator/" target="_blank"></a>
                 </div>
             </div>
-            <!-- Row -->
+
             <div class="card">
                 <div class="imgBx">
                     <img src="./images/wcffit.png" alt="">
@@ -142,18 +180,120 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <!-- End of Projects -->
+    <div id="about" class="container seperation-padding">
+        <div class="row">
+            <div class="col l6">
+                <h3><span class="link-color">02.</span> About Me</h3>
+                <p>I'm Patrick, a software engineer from Northwestern, PA.</p>
+                <p>I enjoy technology from the inside-out, whether that be building web applications, customizing a PC,
+                    or anything in between. My goal is to provide great service, learn, and educate others.</p>
+                <p>Here are a few technologies I've been working with recently:</p>
+                <div class="row list-style">
+                    <div class="col s12 m5">
+                        <h5 class="link-color">Front-End</h5>
+                        <ul>
+                            <li>HTML & (S)CSS</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m4">
+                        <h5 class="link-color">Back-End</h5>
+                        <ul>
+                            <li>PHP</li>
+                            <li>NodeJs</li>
+                            <li>MySQL</li>
+                            <li>SQLite</li>
+                            <li>Firebase</li>
+                        </ul>
+                    </div>
+                    <div class="col s12 m3">
+                        <h5 class="link-color">Other</h5>
+                        <ul>
+                            <li>Laravel / MVC</li>
+                            <li>GIT</li>
+                            <li>Linux/Ubuntu</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col l4 offset-l1">
+                <img class="responsive-img padding-top-5" src="images/avatar.jpg" alt="Avatar">
+            </div>
+        </div>
+    </div>
+    <div id="experience" class="seperation-padding hide">
+        <div class="row">
+            <div class="col l6 offset-l3">
+                <h3><span class="link-color">03.</span> Experience</h3>
+                <div class="row">
+                    <div class="col s12 l3">
+                        <ul>
+                            <% for(let i=0; i < jobs.length; i++) { %>
+                            <li class="border-left padding-left-2 padding-bottom-1 padding-top-1"><%= jobs[i].name %>
+                            </li>
+                            <% } %>
+                        </ul>
+                    </div>
+                    <% for(let i=0; i < jobs.length; i++) { %>
+                    <div id="<%= jobs[i].id %>" class="col s12 l9">
+                        <h5><%= jobs[i].position %> <span class="link-color"> - <%= jobs[i].name %></span></h5>
+                        <p class="fs-14"><%= jobs[i].date %></p>
+                        <ul class="list-style fs-16">
+                            <li><%= jobs[i].about %></li><br>
+                        </ul>
+                    </div>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container seperation-padding">
+        <div class="row">
+            <div class="col l6">
+                <p id="contact" class="link-color">03. What's Next?</p>
+                <h2>Get in Touch</h2>
+                <p>I am always looking for new opportunites to learn, <br> educate, and get involved. My inbox is always
+                    open
+                    for questions <br> or if you just want to say hi, I'll try my best to get back to you!</p>
+                <div class="padding-top-2">
+                    <a class="waves-effect waves-light btn-large my-button"
+                        href="mailto:patrick.d.rizzardi@gmail.com">Say
+                        Hi</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <footer>
-        Copyright &copy patrizzardi.com
+    <footer class="padding-2 center">
+        Designed & Built by Patrick Rizzardi
     </footer>
 
     <script src="./js/materialize.min.js"></script>
 
     <script src="../js/github.js"></script>
     <script src="../js/ui.js"></script>
-    <script src="../js/app.js"></script>
+    <!-- <script src="../js/app.js"></script> -->
+    <script>
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("navbar").style.top = "0";
+            } else {
+                document.getElementById("navbar").style.top = "-60px";
+            }
+
+            if (prevScrollpos > 400) {
+                document.querySelector('.return-button').style.opacity = "1";
+            } else {
+                document.querySelector('.return-button').style.opacity = "0";
+            }
+            prevScrollpos = currentScrollPos;
+        }
+    </script>
     <script>
         M.AutoInit();
     </script>
