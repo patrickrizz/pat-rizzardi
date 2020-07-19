@@ -6,7 +6,6 @@
   "scripts": {
     "test": "snyk test && echo no tests",
     "start": "nodemon index.js",
-    "prod": "snyk protect & nodemon index.js",
     "secure": "npm audit & snyk test & snyk wizard & snyk protect",
     "db": "bash scripts/sequelize.sh"
   },
