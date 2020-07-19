@@ -4,7 +4,7 @@
   "description": "My Website",
   "main": "index.js",
   "scripts": {
-    "test": "snyk test && echo no tests",
+    "test": "echo no tests",
     "start": "nodemon index.js",
     "secure": "npm audit & snyk test & snyk wizard & snyk protect",
     "db": "bash scripts/sequelize.sh"
