@@ -103,8 +103,8 @@
 }
 
 .seperation-padding {
-    padding-top: 260px;
-    padding-bottom: 260px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 .fs-30 {
@@ -202,6 +202,8 @@
     background-position: center center;
     background-repeat: no-repeat;
     color: $primary-color;
+    padding-top: 260px;
+    padding-bottom: 260px;
 
     &.overlay {
         position: relative;
