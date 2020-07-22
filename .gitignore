@@ -4,10 +4,7 @@ db/database.sqlite
 .env
 .env-production
 .snyk
-log
-ghost/ghostpid
-ghost/config.production.json
-ghost/data/
+
 
 # Logs
 logs
@@ -43,3 +40,8 @@ ghost-dev.db
 .ghostpid
 config.development.json
 config.production.json
+ghost/current
+ghost/versions
+.ghost-cli
+ghost/ghostpid
+ghost/data
