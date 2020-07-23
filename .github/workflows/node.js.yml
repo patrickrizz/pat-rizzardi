@@ -25,11 +25,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}              
 
-    - run: npm i
+    - run: npm i 
     - run: npm run build --if-present
     - run: npm test
-<<<<<<< HEAD
-=======
     # env: 
     #   # Server
     #   NODE_ENV=production              
@@ -49,5 +47,4 @@ jobs:
     #   GITHUB_ID=964f5d29d8734edef007
     #   GITHUB_SECRET=a73bf595f642f4979a3ed9041bac52aa4ebe75ae
     - run: /var/www/env.sh
->>>>>>> dev
     - run: pm2 restart web-app
