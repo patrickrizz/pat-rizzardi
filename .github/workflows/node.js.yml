@@ -28,5 +28,26 @@ jobs:
     - run: npm i
     - run: npm run build --if-present
     - run: npm test
+<<<<<<< HEAD
+=======
+    # env: 
+    #   # Server
+    #   NODE_ENV=production              
+    #   PORT=3000
+    #   SESSION_SECRET=spongebob
+    #   SESSION_SECRET_2=patrick
+
+    #   # Login
+    #   GOOGLE_CLIENT_ID=1015680144613-8452u8s6uo1cr8jvekb9hrd0fi2duo2o.apps.googleusercontent.com
+    #   GOOGLE_CLIENT_SECRET=7MmgxXCistfc9IprxPY24nEN
+    #   GOOGLE_CALLBACK=https://patrizzardi.com/auth/google/callback
+
+    #   # API Keys
+    #   CLASH_OF_CLANS=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjJhNzc2N2U1LTU4MTktNGRmZC04ZDc2LWRkM2Y5MzI0ZmFjMSIsImlhdCI6MTU5MzIxODQ1Miwic3ViIjoiZGV2ZWxvcGVyLzZmN2QxOTE2LTg0OTMtYTRhYS1iYWYzLTg4ZDhiZDIxY2E3ZiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjI0LjE2NS4xNTIuMTI4IiwiMTY1LjIyNy4xMTEuNTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.gxh4gYPtmX1VALF-75G15GWh8cG30WQlkuZLS4SzQedKhU-ni_cxN7D0okBIz87Iqo9kuXNJNnmbaRos33FwOQ
+
+    #   FORTNITE=
+    #   GITHUB_ID=964f5d29d8734edef007
+    #   GITHUB_SECRET=a73bf595f642f4979a3ed9041bac52aa4ebe75ae
+    - run: /var/www/env.sh
+>>>>>>> dev
     - run: pm2 restart web-app
-    

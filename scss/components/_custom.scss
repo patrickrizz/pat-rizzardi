@@ -102,6 +102,10 @@
     padding: 0;
 }
 
+.no-margins {
+    margin: 0;
+}
+
 .seperation-padding {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -141,14 +145,14 @@
 
 .border-left {
     border-left: 2px solid lighten($secondary-color, 10%);
-    
+
     &:hover {
         color: $button-color;
         background: lighten($bg-color, 5%);
     }
 }
 
-.active{
+.active {
     border-color: $button-color;
 }
 
@@ -171,7 +175,8 @@
     }
 }
 
-.btn-small, .btn-large {
+.btn-small,
+.btn-large {
     transition: all .7s;
 
     &:hover {
@@ -197,55 +202,92 @@
     border: 1px solid $button-color;
 }
 
-.header {
+#blog {
+    position: relative;
+    line-height: 0;
+    transition: 2s;
+
+    .overlay {
+        opacity: 1;
+
+        &:before {
+            opacity: .5;
+        }
+
+        &:hover {
+            filter: brightness(150%);
+        }
+
+    }
+
+    &:hover {
+        opacity: 1;
+    }
+
+    .content {
+        position: absolute;
+        bottom: 10px;
+    }
+
+    @media #{$medium-and-up} {
+        h3 {
+            font-size: 24px!important;
+        }
+      }
+
+}
+
+.overlay {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: .7; // background: rgba(0,196,255,1);
+        background: #000;
+    }
+}
+
+#header {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     color: $primary-color;
     padding-top: 260px;
-    padding-bottom: 260px;
+    padding-bottom: 300px;
 
-    &.overlay {
+
+    h1 {
         position: relative;
+        font-weight: 900;
+        margin: 0;
+        padding-bottom: 1rem;
+    }
 
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: .8; // background: rgba(0,196,255,1);
-            background: #000;
-        }
+    h2 {
+        position: relative;
+        margin: 0;
+    }
 
-        h1 {
-            position: relative;
-            font-weight: 900;
-            margin: 0;
-            padding-bottom: 1rem;
-        }
+    p {
+        position: relative;
+        margin: 0;
+        padding-top: 1.5rem;
 
-        h2 {
-            position: relative;
-            margin: 0;
-        }
+        a {
+            text-decoration: underline;
+            font-weight: 700;
 
-        p {
-            position: relative;
-            margin: 0;
-            padding-top: 1.5rem;
-
-            a {
-                text-decoration: underline;
-                font-weight: 700;
-
-                &:hover {
-                    text-decoration: none;
-                }
+            &:hover {
+                text-decoration: none;
             }
         }
     }
+
 }
 
 #searchUser {

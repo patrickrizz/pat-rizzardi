@@ -12,6 +12,7 @@
   "author": "Patrick D Rizzardi",
   "license": "ISC",
   "dependencies": {
+    "@tryghost/content-api": "^1.4.1",
     "bcrypt": "^5.0.0",
     "dotenv": "^8.2.0",
     "ejs": "^3.1.3",
