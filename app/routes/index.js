@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
     api.posts.browse({
         include: 'authors,tags',
         limit: 'all',
-    }).then( posts => {
+    }).then(posts => {
         res.render('index', {
             projects: projects,
             jobs: jobs,
@@ -20,12 +20,11 @@ router.get('/', (req, res) => {
             logo: "images/icons/logo.png",
             posts: posts
         })
-        for (i = 0; i < posts.length; i++) {
-            if (posts[i].featured == true) {
-            console.log(posts[i].tags.name)
-            }
-        }
-        
+        // for (i = 0; i < posts.length; i++) {
+        //     console.log(posts[i].title)
+        // }
+
+
     })
 
 

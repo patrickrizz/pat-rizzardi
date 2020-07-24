@@ -20,7 +20,7 @@ const indexNav = [
         number: "03."
     },
     {
-        link: "/auth/google",
+        link: "https://blog.patrizzardi.com/ghost",
         name: "Login"
     }
 
