@@ -10,7 +10,7 @@ router.get('/', ensureAuthenticated, (req, res) => {
     res.render('user/clash/index', {})
 })
 
-router.get('/clan', ensureAuthenticated, async (req, res) => {
+router.get('/clan', async (req, res) => {
     let clan = await clanStats()
     let members = clan.memberList
     let clanMemberStats = await clanMembers()
