@@ -242,6 +242,10 @@
         bottom: 10px;
     }
 
+    h2 {
+        font-size: 42px;
+    }
+
     @media #{$medium-and-up} {
         h3 {
             font-size: 24px!important;
