@@ -21,7 +21,7 @@ router.get('/', (req, res) => {
             posts: posts
         })
         // for (i = 0; i < posts.length; i++) {
-        //     console.log(posts[i].title)
+        //     console.log(posts[i].url)
         // }
 
 
