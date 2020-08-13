@@ -15,9 +15,14 @@ const indexNav = [
     //     number: "03."
     // },
     {
+        link: "/#blog",
+        name: "Recent Posts",
+        number: "03."
+    },
+    {
         link: "/#contact",
         name: "Contact",
-        number: "03."
+        number: "04."
     },
     {
         link: "https://blog.patrizzardi.com/ghost",

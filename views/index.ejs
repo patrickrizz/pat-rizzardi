@@ -34,37 +34,6 @@
         <div id="profile"></div>
     </div> -->
 <!-- End of Github -->
-<!-- Blog -->
-<section id="blog" class="seperation-padding hide">
-    <h2 class="padding-left-5 padding-bottom-5"><span class="link-color">01.</span> Tech and Fitness Blog</h2>
-    <div class="row no-margins">
-        <% for(i = 0; i < 3; i++) { %>
-        <div class="col l4 overlay no-padding">
-            <img class="responsive-img" src="<%- posts[i].feature_image %>" alt="">
-            <div class="content padding-2">
-                <h3><%- posts[i].title %></h3>
-                <% for(t = 0; t < posts[i].tags.length; t++) { %>
-                <p><%- posts[i].tags[t].name %></p>
-                <% } %>
-            </div>
-        </div>
-        <% } %>
-    </div>
-    <div class="row">
-        <% for(i = 3; i < posts.length; i++) { %>
-        <div class="col l3 overlay no-padding">
-            <img class="responsive-img" src="<%- posts[i].feature_image %>" alt="">
-            <div class="content padding-1">
-                <h3><%- posts[i].title %></h3>
-                <% for(t = 0; t < posts[i].tags.length; t++) { %>
-                <p><%- posts[i].tags[t].name %></p>
-                <% } %>
-            </div>
-        </div>
-        <% } %>
-    </div>
-</section>
-<!-- End of Blog -->
 <!-- Featured Projects -->
 <section id="projects" class="seperation-padding">
     <div class="container">
@@ -107,7 +76,7 @@
                 <div class="col s12 m5">
                     <h5 class="link-color">Front-End</h5>
                     <ul>
-                        <li>HTML & (S)CSS</li>
+                        <li>HTML & CSS</li>
                         <li>JavaScript (ES6+)</li>
                         <li>React</li>
                     </ul>
@@ -166,11 +135,81 @@
     </div>
 </section>
 <!-- End of Experience -->
+<!-- Blog -->
+<section id="blog" class="seperation-padding">
+    <h2 class="padding-left-5 padding-bottom-2"><span class="link-color">03.</span> Recent Posts</h2>
+    <div class="row no-margins">
+        <% if(posts.length === 1) {
+            for(i = 0; i < 1; i++) { %>
+        <a href="<%- posts[i].url %>">
+            <div class="col l4 overlay no-padding">
+                <img class="responsive-img"
+                    src="<% if (!posts[i].feature_image) { %> images/placeholder.png <% } else { %> <%- posts[i].feature_image %><% } %>"
+                    alt="">
+                <div class="content padding-2">
+                    <h3><%- posts[i].title %></h3>
+                    <% for(t = 0; t < posts[i].tags.length; t++) { %>
+                    <p class="inline comma"><%- posts[i].tags[t].name %></p>
+                    <% } %>
+
+                </div>
+            </div>
+        </a>
+        <% } } else if(posts.length === 2) {
+            for(i = 0; i < 2; i++) { %>
+        <a href="<%- posts[i].url %>">
+            <div class="col l4 overlay no-padding">
+                <img class="responsive-img"
+                    src="<% if (!posts[i].feature_image) { %> images/placeholder.png <% } else { %> <%- posts[i].feature_image %><% } %>"
+                    alt="">
+                <div class="content padding-2">
+                    <h3><%- posts[i].title %></h3>
+                    <% for(t = 0; t < posts[i].tags.length; t++) { %>
+                    <p class="inline comma"><%- posts[i].tags[t].name %></p>
+                    <% } %>
+                </div>
+            </div>
+        </a>
+        <% } } else { for(i = 0; i < 3; i++) { %>
+        <a href="<%- posts[i].url %>">
+            <div class="col l4 overlay no-padding">
+                <img class="responsive-img"
+                    src="<% if (!posts[i].feature_image) { %> images/placeholder.png <% } else { %> <%- posts[i].feature_image %><% } %>"
+                    alt="">
+                <div class="content padding-2">
+                    <h3><%- posts[i].title %></h3>
+                    <% for(t = 0; t < posts[i].tags.length; t++) { %>
+                    <p class="inline comma"><%- posts[i].tags[t].name %></p>
+                    <% } %>
+                </div>
+            </div>
+        </a>
+        <% } } %>
+    </div>
+    <div class="row">
+        <% for(i = 3; i < posts.length; i++) { %>
+        <a href="<%- posts[i].url %>">
+            <div class="col l3 overlay no-padding">
+                <img class="responsive-img"
+                    src="<% if (!posts[i].feature_image) { %> images/placeholder.png <% } else { %> <%- posts[i].feature_image %><% } %>"
+                    alt="">
+                <div class="content padding-1">
+                    <h3><%- posts[i].title %></h3>
+                    <% for(t = 0; t < posts[i].tags.length; t++) { %>
+                    <p class="inline comma"><%- posts[i].tags[t].name %></p>
+                    <% } %>
+                </div>
+            </div>
+        </a>
+        <% } %>
+    </div>
+</section>
+<!-- End of Blog -->
 <!-- Contact -->
 <section id="contact" class="container seperation-padding">
     <div class="row">
         <div class="col l6">
-            <p class="link-color">03. What's Next?</p>
+            <p class="link-color">04. What's Next?</p>
             <h2>Get in Touch</h2>
             <p>I am always looking for new opportunites to learn, <br> educate, and get involved. My inbox is always
                 open

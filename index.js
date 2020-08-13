@@ -2,6 +2,7 @@ require("dotenv").config({ silent: true })
 const express = require("express")
 const app = express()
 const passport = require("passport")
+const msg = require('./message')
 
 exports.app = app
 
@@ -10,12 +11,24 @@ const { startServer } = require("./app/startServer")
 const { handleSession } = require("./app/handleSession")
 require('./config/passport-setup')
 
+const removeHeaders = () => {
+    app.use(function (req, res, next) {
+        res.removeHeader('X-Powered-By')
+        res.removeHeader('Server')
+
+        next()
+    })
+}
+
 const handleMiddleware = () => {
-    
+
+    removeHeaders()
     handleSession()
     app.use(passport.initialize())
     app.use(passport.session())
 }
+
+
 
 handleMiddleware()
 handleRoutes()

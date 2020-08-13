@@ -106,6 +106,19 @@
     margin: 0;
 }
 
+.inline {
+    display: inline;
+}
+
+.comma ~ .comma:not(:empty):before {
+    content: ", ";
+}
+
+.no-decoration, a:link, a:visited, a:active{
+    text-decoration: none;
+    color: white!important;
+}
+
 .seperation-padding {
     padding-top: 150px;
     padding-bottom: 150px;
@@ -227,6 +240,10 @@
     .content {
         position: absolute;
         bottom: 10px;
+    }
+
+    h2 {
+        font-size: 42px;
     }
 
     @media #{$medium-and-up} {
