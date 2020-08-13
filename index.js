@@ -13,6 +13,7 @@ require('./config/passport-setup')
 
 const removeHeaders = () => {
     app.use(function (req, res, next) {
+<<<<<<< HEAD
         res.removeHeader('X-Powered-By')
         res.removeHeader('Server')
 
@@ -22,6 +23,17 @@ const removeHeaders = () => {
 
 const handleMiddleware = () => {
 
+=======
+       res.removeHeader('X-Powered-By')
+       res.removeHeader('Server')
+
+       next()
+    })
+} 
+
+const handleMiddleware = () => {
+    
+>>>>>>> 12459f18f53feda58bbadfdf0d08d0d3fc23c745
     removeHeaders()
     handleSession()
     app.use(passport.initialize())
