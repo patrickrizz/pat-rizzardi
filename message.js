@@ -15,7 +15,7 @@ const CronJob = require('cron').CronJob
         //channel.send("5");
     });
 
-    msg.start();
+    //msg.start();
 
   
   module.exports = msg;
