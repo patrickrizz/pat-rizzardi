@@ -2,7 +2,6 @@ require("dotenv").config({ silent: true })
 const express = require("express")
 const app = express()
 const passport = require("passport")
-const msg = require('./message')
 
 exports.app = app
 
