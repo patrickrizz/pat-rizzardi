@@ -1,0 +1,47 @@
+db/database.sqlite
+.vscode
+.vs
+.env
+.env-production
+.snyk
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons (http://nodejs.org/api/addons.html)
+build/Release
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Ghost
+ghost-dev.db
+.ghostpid
+config.development.json
+config.production.json
+ghost/current
+ghost/versions
+.ghost-cli
+ghost/ghostpid
+ghost/data
