@@ -12,7 +12,7 @@ module.exports = {
     },
     production: {
         dialect: "sqlite",
-        storage: "./db/production.sq",
+        storage: "/var/www/db/production.sq",
         logging: function (msg) {
             let log = fs.createWriteStream('./log/database.txt', { flags: 'a' }, (err) => {
                 if (err) console.log(err)
