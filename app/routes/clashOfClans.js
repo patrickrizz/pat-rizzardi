@@ -3,6 +3,7 @@ const router = express.Router()
 const { clanStats } = require("../../api/handleClashData")
 const { clashNav } = require('../../public/nav')
 const insertClanMemberStats = require('../../services/insertClanMemberStats')
+const db = require('../../db/models')
 
 router.use(express.static('public'))
 
@@ -21,11 +22,11 @@ router.get('/', async (req, res) => {
 
 router.get('/member-stats', async (req, res) => {
     let clan = await clanStats()
-    let members = clan.memberList
+    let stats = await db.ClashOfClansMemberData.findAll()
 
     res.render('clashOfClans/memberStats', { 
         clan: clan,
-        members: members,
+        stats: stats,
         logo: "images/icons/clash-logo.png",
         nav: clashNav,
         projects: ''
