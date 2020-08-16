@@ -8,6 +8,8 @@ exports.app = app
 const { handleRoutes } = require("./app/handleRoutes")
 const { startServer } = require("./app/startServer")
 const { handleSession } = require("./app/handleSession")
+const job = require("./services/cronJobService")
+
 require('./config/passport-setup')
 
 const removeHeaders = () => {
@@ -28,7 +30,7 @@ const handleMiddleware = () => {
 }
 
 
-
+job.start()
 handleMiddleware()
 handleRoutes()
 startServer()

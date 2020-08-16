@@ -6,7 +6,7 @@ const handleRoutes = () => {
 
     middleware()
     routes()
-    userRoutes()
+    clashOfClansRoutes()
     unknownRoutes()
 }
 
@@ -27,9 +27,8 @@ const routes = () => {
 }
 
 //users routes
-const userRoutes = () => {
-    app.use('/user', require('./routes/user'))
-    app.use('/user/clash', require('./routes/clash'))
+const clashOfClansRoutes = () => {
+    app.use('/clashOfClans', require('./routes/clashOfClans'))
 }
 
 //404 

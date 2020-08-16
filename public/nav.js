@@ -33,13 +33,13 @@ const indexNav = [
 
 const clashNav = [
     {
-        link: "/summary",
+        link: "/clashOfClans",
         name: "Summary",
         number: ""
     }, 
     {
-        link: "/player",
-        name: "Player",
+        link: "/clashOfClans/member-stats",
+        name: "Player Ranking",
         number: ""
     },
     // {
@@ -48,8 +48,8 @@ const clashNav = [
     //     number: "03."
     // },
     {
-        link: "/#clan",
-        name: "Clan",
+        link: "/clashOfClans/member-stats",
+        name: "Clan Ranking",
         number: ""
     },
     {
