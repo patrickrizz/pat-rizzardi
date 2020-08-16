@@ -1,9 +1,4 @@
 const Discord = require('discord.js')
-//const client = new Discord.Client()
-const CronJob = require('cron').CronJob
-
-// const key = "NjkyMjAxODE4MDQ1OTM5NzI0.XnrFLQ.pLDnCGSeoaX2FLPZhqeEygVXGNQ";
-const channelId = "743235183825911879";
 
 class DiscordService {
     constructor() {
@@ -11,22 +6,18 @@ class DiscordService {
 
         this._client.once('ready', () => {
             console.log(`Logged in as ${this._client.user.tag}`)
-            //let c = this._client.channels.cache.get(channelId)
-            //let c = this._channel(channelId)
-            //console.log(c)
         })
 
         this._client.login(process.env.DISCORD_TOKEN)
     }
 
-    postMessage(channel, message) {
+    async postMessage(channel, message) {
         let c = this._channel(channel)
-        console.log(c)
-        //c.send(message)
+        await c.send(message) 
     }
 
-    _channel(name) {
-        return this._client.channels.cache.find(c => c.name == name )
+    _channel(channel) {
+        return this._client.channels.cache.get(channel)
     }
 }
 
@@ -34,6 +25,7 @@ const instance = new DiscordService()
 Object.freeze(instance)
 
 module.exports = instance
+
 
 // //Discord timed messages
 // //client.login(key);
