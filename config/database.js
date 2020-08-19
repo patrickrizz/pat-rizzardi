@@ -11,13 +11,10 @@ module.exports = {
         storage: ":memory"
     },
     production: {
-        dialect: "sqlite",
-        storage: "./db/production.sqlite",
-        logging: function (msg) {
-            let log = fs.createWriteStream('./log/database.txt', { flags: 'a' }, (err) => {
-                if (err) console.log(err)
-            })
-            log.write(`${msg}\n`)
-        }
-    }
+        username: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB,
+        host: process.env.DB_HOST,
+        dialect: "postgres"
+      }
 }
