@@ -1,4 +1,4 @@
-db/dev.sqlite
+.sqlite
 .vscode
 .vs
 .env
