@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo no tests",
-    "start": "nodemon index.js",
+    "start": "npx sequelize db:migrate & nodemon index.js",
     "secure": "npm audit & snyk test & snyk wizard & snyk protect",
     "db": "bash scripts/sequelize.sh"
   },
