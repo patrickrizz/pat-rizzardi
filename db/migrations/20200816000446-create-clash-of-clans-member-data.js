@@ -35,6 +35,12 @@ module.exports = {
       numOfStars: {
         type: Sequelize.INTEGER
       },
+      avgAttackRate: {
+        type: Sequelize.INTEGER
+      },
+      avgStarRate: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
