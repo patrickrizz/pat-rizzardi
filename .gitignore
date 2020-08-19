@@ -1,9 +1,10 @@
-.sqlite
+*.sqlite
 .vscode
 .vs
 .env
 .env-production
 .snyk
+*.crt
 
 
 # Logs
