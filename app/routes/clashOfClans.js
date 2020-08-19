@@ -1,47 +1,31 @@
 const express = require('express')
 const router = express.Router()
-const { clanStats } = require("../../api/handleClashData")
-const { clashNav } = require('../../public/nav')
-const insertClanMemberStats = require('../../services/insertClanMemberStats')
-const db = require('../../db/models')
+const ClashRouteService = require('../../services/ClashRouteService')
 
 router.use(express.static('public'))
 
 router.get('/', async (req, res) => {
-    let clan = await clanStats()
-    let members = clan.memberList
+    let params = await new ClashRouteService().params()
 
-    res.render('clashOfClans/members', { 
-        clan: clan,
-        members: members,
-        logo: "images/icons/clash-logo.png",
-        nav: clashNav,
-        projects: ''
+    res.render('clashOfClans/members', {
+        ...params
     })
 })
 
 router.get('/member-stats', async (req, res) => {
-    let clan = await clanStats()
-    let stats = await db.ClashOfClansMemberData.findAll()
+    let params = await new ClashRouteService().params()
 
-    res.render('clashOfClans/memberStats', { 
-        clan: clan,
-        stats: stats,
-        logo: "images/icons/clash-logo.png",
-        nav: clashNav,
-        projects: ''
+    res.render('clashOfClans/memberStats', {
+        ...params
     })
 })
 
+//udpate table
 router.post('/member-stats', (req, res) => {
-    insertClanMemberStats()
+    insertClanMemberWarStats()
 
-    res.redirect('/clashOfClans')
+    res.redirect('/clash-of-clans/member-stats')
     res.end()
-})
-
-router.get('/player', (req, res) => {
-    res.render('user/clash/player', {})
 })
 
 module.exports = router

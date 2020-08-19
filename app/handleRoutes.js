@@ -28,7 +28,7 @@ const routes = () => {
 
 //users routes
 const clashOfClansRoutes = () => {
-    app.use('/clashOfClans', require('./routes/clashOfClans'))
+    app.use('/clash-of-clans', require('./routes/clashOfClans'))
 }
 
 //404 

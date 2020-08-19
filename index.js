@@ -8,7 +8,8 @@ exports.app = app
 const { handleRoutes } = require("./app/handleRoutes")
 const { startServer } = require("./app/startServer")
 const { handleSession } = require("./app/handleSession")
-const job = require("./services/cronJobService")
+require("./jobs/insertDataJob")
+// require("./jobs/discordJob")
 
 require('./config/passport-setup')
 
@@ -29,8 +30,6 @@ const handleMiddleware = () => {
     app.use(passport.session())
 }
 
-
-job.start()
 handleMiddleware()
 handleRoutes()
 startServer()
