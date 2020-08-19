@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     donationReceived: DataTypes.INTEGER,
     numOfAttacks: DataTypes.INTEGER,
     numOfWars: DataTypes.INTEGER,
-    numOfStars: DataTypes.INTEGER
+    numOfStars: DataTypes.INTEGER,
+    avgAttackRate: DataTypes.INTEGER,
+    avgStarRate: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'ClashOfClansMemberData',

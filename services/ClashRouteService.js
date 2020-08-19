@@ -1,6 +1,6 @@
 const { getClanMemberData } = require("../lib/getClanMemberData");
 const { clashNav } = require('../public/nav');
-const db = require("../db/models");
+const { ClashOfClansMemberData } = require("../db/models");
 
 class ClashRouteService {
     constructor() {
@@ -10,7 +10,7 @@ class ClashRouteService {
     async params() {
         let clanMemberData = await getClanMemberData()
         let membersData = await clanMemberData.memberList
-        let clashOfClansMemberData = await db.ClashOfClansMemberData.findAll()
+        let clashOfClansMemberData = await ClashOfClansMemberData.findAll()
         return {
             clan: await clanMemberData,
             members: membersData,
