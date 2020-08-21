@@ -2,7 +2,7 @@
   "name": "pat-rizzardi-portfolio",
   "version": "1.0.0",
   "description": "My Website",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo no tests",
     "start": "npx sequelize-cli db:migrate & nodemon ./bin/www",
