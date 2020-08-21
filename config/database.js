@@ -8,7 +8,7 @@ module.exports = {
     },
     production: {
         dialect: "sqlite",
-        storage: "./db/production.db",
+        storage: "./production.db",
         logging: false
     }
     // production: {

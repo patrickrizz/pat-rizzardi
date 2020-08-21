@@ -1,5 +1,5 @@
 const express = require('express')
-const IndexRouteService = require('../../services/IndexRouteService')
+const IndexRouteService = require('../services/IndexRouteService')
 const router = express.Router()
 
 router.use(express.static('public'))

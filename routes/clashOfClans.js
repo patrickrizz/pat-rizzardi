@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const ClashRouteService = require('../../services/ClashRouteService')
-const insertClanMemberWarStats = require('../../lib/insertClanMemberWarStats')
+const ClashRouteService = require('../services/ClashRouteService')
+const insertClanMemberWarStats = require('../lib/insertClanMemberWarStats')
 
 router.use(express.static('public'))
 
