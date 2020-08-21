@@ -46,4 +46,6 @@ app.use('/clash-of-clans', require('./routes/clashOfClans'))
 //404 route
 app.use((req, res) => { res.status(404).send('<h1 style="text-align: center font-size: 3.5em">404 Reqeust Not Found</h1>') })
 
-module.exports = app
+app.listen(process.env.PORT, () => {
+    console.log(`App is listening on port ${process.env.port}`)
+})
