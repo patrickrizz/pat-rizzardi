@@ -8,8 +8,10 @@ exports.app = app
 const { handleRoutes } = require("./app/handleRoutes")
 const { startServer } = require("./app/startServer")
 const { handleSession } = require("./app/handleSession")
+
+//start cron jobs
 require("./jobs/insertDataJob")
-// require("./jobs/discordJob")
+require("./jobs/discordJob")
 
 require('./config/passport-setup')
 
@@ -28,6 +30,7 @@ const handleMiddleware = () => {
     app.use(passport.initialize())
     app.use(passport.session())
 }
+
 
 handleMiddleware()
 handleRoutes()

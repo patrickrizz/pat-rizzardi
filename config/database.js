@@ -1,6 +1,6 @@
 require('dotenv').config()
 const fs = require('fs');
-const cert = fs.readFileSync(__dirname + '/ca-certificate.crt');
+//const cert = fs.readFileSync(__dirname + '/ca-certificate.crt');
 
 module.exports = {
     development: {
@@ -16,8 +16,8 @@ module.exports = {
         dialect: "mysql",
         dialectOptions: {
             ssl: {
-                rejectUnauthorized: false,
-                ca: cert
+               // rejectUnauthorized: false,
+               // ca: cert
             }
           }
       }

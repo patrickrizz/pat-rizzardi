@@ -1,7 +1,8 @@
 const insertAllClanMemberData = require('../lib/insertAllClanMemberData')
-const CronService = require('../services/CronService')
+const { CronJob } = require("cron");
 
-let task = insertAllClanMemberData()
-let insertData = new CronService('*/10 * * * * *', task)
+let insertData = new CronJob('*/10 * * * * *', () => {
+    return insertAllClanMemberData()
+})
 
-module.exports = insertData
+insertData.start()
