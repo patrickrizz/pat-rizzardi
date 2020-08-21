@@ -1,6 +1,6 @@
 const { getClanMemberData } = require("../lib/getClanMemberData");
 const { clashNav } = require('../public/nav');
-const { ClashOfClansMemberData } = require("../db/models");
+const { ClashOfClansMemberData } = require("../models");
 
 class ClashRouteService {
     constructor() {
