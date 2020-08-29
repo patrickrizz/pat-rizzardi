@@ -10,17 +10,6 @@ jobs:
     steps:
       - name: Deploy NodeJS app
         uses: appleboy/ssh-action@v0.1.2
-        env:
-          NODE_ENV:         
-          SESSION_SECRET: ${{ secrets.SESSION_SECRET }}
-          SESSION_SECRET_2: ${{ secrets.SESSION_SECRET_2 }}
-          CLASH_OF_CLANS_TOKEN: ${{ secrets.CLASH_OF_CLANS_TOKEN }}
-          GHOST_API: ${{ secrets.GHOST_API }}
-          GITHUB_ID: ${{ secrets.GITHUB_ID }}
-          GITHUB_SECRET: ${{ secrets.GITHUB_SECRET }}
-          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
-          GHOST_URL: https://blog.patrizzardi.com
-          CLASH_OF_CLANS_URL: https://api.clashofclans.com/v1/
         with:
           host: ${{secrets.SSH_HOST}}
           key: ${{ secrets.SSH_KEY }}
