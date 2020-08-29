@@ -20,7 +20,28 @@ jobs:
           #   cd /var/www/fitness-app/releases/$KEY # navigate into the folder
           #   git clone https://github.com/patrickrizz/fitness-app.git . &> /dev/null
           script: |
-            /var/www/pat-rizzardi/scripts/deploy.sh
+            cd /var/www/pat-rizzardi && git pull
+      env:
+        # Server
+        NODE_ENV:           
+        SESSION_SECRET: spongebob
+        SESSION_SECRET_2: patrick
+        # API Keys
+        CLASH_OF_CLANS_TOKEN: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjJhNzc2N2U1LTU4MTktNGRmZC04ZDc2LWRkM2Y5MzI0ZmFjMSIsImlhdCI6MTU5MzIxODQ1Miwic3ViIjoiZGV2ZWxvcGVyLzZmN2QxOTE2LTg0OTMtYTRhYS1iYWYzLTg4ZDhiZDIxY2E3ZiIsInNjb3BlcyI6WyJjbGFzaCJdLCJsaW1pdHMiOlt7InRpZXIiOiJkZXZlbG9wZXIvc2lsdmVyIiwidHlwZSI6InRocm90dGxpbmcifSx7ImNpZHJzIjpbIjI0LjE2NS4xNTIuMTI4IiwiMTY1LjIyNy4xMTEuNTAiXSwidHlwZSI6ImNsaWVudCJ9XX0.gxh4gYPtmX1VALF-75G15GWh8cG30WQlkuZLS4SzQedKhU-ni_cxN7D0okBIz87Iqo9kuXNJNnmbaRos33FwOQ
+        GHOST_API: 07f5f548b5a24f257a04f6202f
+        GITHUB_ID: 964f5d29d8734edef007
+        GITHUB_SECRET: a73bf595f642f4979a3ed9041bac52aa4ebe75ae
+        DISCORD_TOKEN: NjkyMjAxODE4MDQ1OTM5NzI0.XnrFLQ.pju5JZgPT_QVqXYlRg0BeT7pCik
+        # URL
+        GHOST_URL: https://blog.patrizzardi.com
+        CLASH_OF_CLANS_URL: https://api.clashofclans.com/v1/
+        #DB LOGIN
+        DB_HOST: mysql
+        DB: fitness
+        DB_HOST: 68.183.129.142
+        DB_USER: app
+        DB_PASSWORD: password
+
       
 #     needs: deploy
 #     runs-on: ubuntu-latest
