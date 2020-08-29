@@ -47,3 +47,5 @@ ghost/versions
 .ghost-cli
 ghost/ghostpid
 ghost/data
+
+scripts
