@@ -1,7 +1,7 @@
 let tests = (a, b, c) => {
     a_expected = "215364"
     b_expected = "This is a mixed up string."
-    c_expected = "abcde"
+    c_expected = "abcde"    
 
     if (a == a_expected) {
         console.log(`${a} Passed`)
@@ -22,4 +22,11 @@ let tests = (a, b, c) => {
     }
 }
 
+let pTests = (str, str2, str3) => {
+    console.log(str)
+    console.log(str2)
+    console.log(str3)
+}
+
 exports.tests = tests
+exports.pTests = pTests
