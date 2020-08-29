@@ -31,7 +31,7 @@ jobs:
           #   cd /var/www/fitness-app/releases/$KEY # navigate into the folder
           #   git clone https://github.com/patrickrizz/fitness-app.git . &> /dev/null
           script:
-            cd /var/www/pat-rizzardi && git pull
+            cd /var/www/pat-rizzardi && git pull && npm i && npx sequelize-cli db:migrate && pm2 restart patrizzardi
 
       
 #     needs: deploy
