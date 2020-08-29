@@ -35,12 +35,6 @@ jobs:
           # URL
           GHOST_URL: https://blog.patrizzardi.com
           CLASH_OF_CLANS_URL: https://api.clashofclans.com/v1/
-          #DB LOGIN
-          DB_HOST: mysql
-          DB: clash_of_clans
-          DB_HOST: localhost
-          DB_USER: app
-          DB_PASSWORD: 
 
       
 #     needs: deploy
