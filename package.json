@@ -24,7 +24,7 @@
     "express-session": "^1.17.1",
     "googleapis": "^52.1.0",
     "mysql2": "^2.1.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nodemon": "^2.0.4",
     "passport": "^0.4.1",
     "passport-google-oauth": "^2.0.0",
