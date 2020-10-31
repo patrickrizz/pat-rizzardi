@@ -8,7 +8,7 @@ const session = require('express-session')
 
 //start cron jobs
 require("./jobs/insertDataJob")
-require("./jobs/discordJob")
+//require("./jobs/discordJob") for discord message bot
 
 //view engine setup
 app.set('views', path.join(__dirname, 'views'))
